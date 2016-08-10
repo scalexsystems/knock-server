@@ -2,10 +2,10 @@ import Http from 'http';
 import dotEnv from 'dotenv';
 import Redis from 'ioredis';
 import createDebug from 'debug';
-import path from 'path';
+import fs from 'fs';
 
 export default function (Server, config = {}) {
-  if (path.existsSync('./.env')) {
+  if (fs.existsSync('./.env')) {
     dotEnv.config({ path: './.env' });
   }
 
