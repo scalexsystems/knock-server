@@ -14,7 +14,7 @@
   "main": "dist/knock.common.js",
   "jsnext:main": "dist/knock.es.js",
   "bin": {
-    "knock": "dist/knock.js"
+    "knock": "dist/knock.bin.js"
   },
   "keywords": [
     "echo server",

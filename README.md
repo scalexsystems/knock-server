@@ -4,7 +4,7 @@
 ## Installation
 
 ```sh
-$ npm install --save knock-server
+$ npm install --save git+https://git@github.com/zerohq/knock-server.git
 ```
 
 ## Usage
