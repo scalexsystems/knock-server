@@ -1,0 +1,56 @@
+{
+  "name": "knock-server",
+  "version": "0.1.0",
+  "description": "A socket.io server inspired from pusher service.",
+  "homepage": "http://opensource.scalex.xyz/knock",
+  "author": {
+    "name": "Scalex Systems",
+    "email": "opensource@scalex.xyz",
+    "url": "http://opensource.scalex.xyz/"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/knock.common.js",
+  "jsnext:main": "dist/knock.es.js",
+  "bin": {
+    "knock": "dist/knock.js"
+  },
+  "keywords": [
+    "echo server",
+    "laravel",
+    "push notifications"
+  ],
+  "bugs": {
+    "url": "https://github.com/zerohq/knock-server/issues",
+    "email": "opensource@scalex.xyz"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-es2015-rollup": "^1.2.0",
+    "eslint": "^3.2.2",
+    "eslint-config-airbnb": "^10.0.0",
+    "eslint-plugin-import": "^1.12.0",
+    "eslint-plugin-jsx-a11y": "^2.0.1",
+    "eslint-plugin-react": "^6.0.0",
+    "rollup": "^0.34.7",
+    "rollup-plugin-babel": "^2.6.1",
+    "rollup-plugin-json": "^2.0.1"
+  },
+  "repository": "zerohq/knock-server",
+  "scripts": {
+    "test": "DEBUG=knock-server:* babel-node --presets es2015 test/index.js",
+    "lint": "eslint src/** test/**",
+    "build": "babel-node --presets es2015 ./rollup.build.js",
+    "prepublish": "npm run build"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "debug": "latest",
+    "dotenv": "^2.0.0",
+    "engine.io": "^1.6.11",
+    "ioredis": "latest",
+    "superagent": "^2.1.0"
+  }
+}
