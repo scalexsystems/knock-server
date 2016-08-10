@@ -43,6 +43,6 @@ rollup({
   ],
   cache,
 }).then((bundle) => {
-  const compiled = bundle.generate(['cjs']);
-  fs.writeFileSync('dist/knock.bin.js', `#!/usr/bin/env node\r\n\r\n${compiled.code}`);
+  const compiled = bundle.generate({format: 'cjs'});
+  fs.writeFileSync('dist/knock.bin.js', `#!/usr/bin/env node \n\n${compiled.code}`);
 }).catch((error) => log(error));
