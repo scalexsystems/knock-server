@@ -1,6 +1,7 @@
 import babel from 'rollup-plugin-babel';
 import json from 'rollup-plugin-json';
 import { rollup } from 'rollup';
+import fs from 'fs';
 
 // used to track the cache for subsequent bundles
 let cache = null;
@@ -41,7 +42,7 @@ rollup({
     }),
   ],
   cache,
-}).then((bundle) => bundle.write({
-  format: 'cjs',
-  dest: 'dist/knock.bin.js',
-})).catch((error) => log(error));
+}).then((bundle) => {
+  const compiled = bundle.generate(['cjs']);
+  fs.writeFileSync('dist/knock.bin.js', `#!/usr/bin/env node\r\n\r\n${compiled.code}`);
+}).catch((error) => log(error));
