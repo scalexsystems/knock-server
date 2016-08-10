@@ -40,7 +40,7 @@
   },
   "repository": "zerohq/knock-server",
   "scripts": {
-    "test": "DEBUG=knock-server:* babel-node --presets es2015 test/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src/** test/**",
     "build": "babel-node --presets es2015 ./rollup.build.js",
     "prepublish": "npm run build"

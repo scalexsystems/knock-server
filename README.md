@@ -16,7 +16,7 @@ Knock.start()
 ```
 ## License
 
-MIT © [Scalex Systems](Http://scalex.xyz/)
+MIT © [Scalex Systems](http://opensource.scalex.xyz/)
 
 
 [npm-image]: https://badge.fury.io/js/knock-server.svg
